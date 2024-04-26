@@ -3,6 +3,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"time"
 )
 
@@ -28,6 +29,17 @@ func main() {
 			fmt.Print(".")
 			time.Sleep(1 * time.Second)
 			fmt.Println()
+			//creating random list:
+			var qlist = [1000]int{}
+			for i := range qlist {
+				qlist[i] = rand.Intn(1000)
+			}
+			for j := range qlist {
+				p := qlist[j]
+				fmt.Print(p, " - ")
+			}
+			fmt.Println()
+
 		case 2:
 		case 3:
 			flag = true
